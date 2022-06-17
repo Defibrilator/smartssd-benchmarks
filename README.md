@@ -12,9 +12,9 @@ Four benchmarks were done, random read/write, and sequential read/write.
 
 Here we are conducting a throughput benchmark using the FPGA as DMA.
 
-The code can be found inside **bin/benchmark.cpp** and can be run with 
+The code can be found inside **src/benchmark.cpp** and can be run with 
 
-> `./bin/benchmark -x ./bin/empty_kernel.xclbin -p <file path on the smartssd> -i <number of iterations>`
+> `bin/benchmark -x bin/empty_kernel.xclbin -p <file path on the smartssd> -i <number of iterations>`
 
 An empty kernel is used because the data doesn't need to be modified on the fpga logic, but a kernel is still needed because the buffers are defined with it.
 
