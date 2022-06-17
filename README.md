@@ -1,6 +1,6 @@
 # Benchmarks
 
-We are working with the U.2 SmartSSD from Xilinx. These benchmarks are made to test the throughput capabilities of the SmartSSD.
+We are working with the U.2 SmartSSD from Xilinx. These benchmarks are made to test the throughput capabilities of the SmartSSD. You can find an overview of the setup [here](https://github.com/Defibrilator/smartssd-setup).
 
 ## Without FPGA
 
