@@ -43,7 +43,7 @@
 #include "experimental/xrt_device.h"
 #include "experimental/xrt_kernel.h"
 
-#define DATA_SIZE (2000000000/4)
+#define DATA_SIZE (500000000)
 
 double throughput_from_fpga_max_host_to_ssd = 0;
 double throughput_from_fpga_max_ssd_to_host = 0;
@@ -54,7 +54,7 @@ double throughput_from_cpu_max_ssd_to_host = 0;
 class Timer {
     std::chrono::high_resolution_clock::time_point mTimeStart;
 
-   public:
+public:
     Timer() { reset(); }
     long long stop() {
         std::chrono::high_resolution_clock::time_point timeEnd = std::chrono::high_resolution_clock::now();
@@ -65,7 +65,7 @@ class Timer {
 
 Timer global_timer;
 
-std::pair<double, double> p2p_host_to_ssd(int& nvmeFd, xrtDeviceHandle device, xrt::kernel& krnl, xrt::bo bo, int *bo_map) {
+std::pair<double, double> p2p_host_to_ssd(int& nvmeFd, xrt::kernel& krnl, xrt::bo bo, int *bo_map) {
 	Timer timer_from_cpu, timer_from_fpga;
     int ret = 0;
     size_t vector_size_bytes = sizeof(int) * DATA_SIZE;
@@ -164,7 +164,7 @@ int main(int argc, char** argv) {
     //**************//"<Full Arg>",  "<Short Arg>", "<Description>", "<Default>"
     parser.addSwitch("--xclbin_file", "-x", "input binary file string", "");
     parser.addSwitch("--device_id", "-d", "device index", "0");
-    parser.addSwitch("--iterations", "-i", "number of iterations", "1000000");
+    parser.addSwitch("--iterations", "-i", "number of iterations", "1000");
     parser.addSwitch("--file_path", "-p", "file path string", "");
     parser.parse(argc, argv);
 
@@ -212,7 +212,7 @@ int main(int argc, char** argv) {
             std::cerr << "ERROR: open " << filepath << "failed: " << std::endl;
             return EXIT_FAILURE;
         }
-        auto p1 = p2p_host_to_ssd(nvmeFd, device, krnl, bo, bo_map);
+        auto p1 = p2p_host_to_ssd(nvmeFd, krnl, bo, bo_map);
         sum_write_throughput_from_fpga += p1.first;
         sum_write_throughput_from_cpu += p1.second;
         (void)close(nvmeFd);
