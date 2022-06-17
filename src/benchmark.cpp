@@ -246,11 +246,11 @@ int main(int argc, char** argv) {
     		  << "		Max throughput from fpga: " << throughput_from_fpga_max_ssd_to_host << " MB/s\n"
               << "		Average throughput from fpga: " << average_read_throughput_from_fpga << " MB/s\n";
 
-    long long duration = timer.stop() / 1000000;// convert us to s;   
-    long long min = duration / 60;
-    long long sec = duration % 60; 
+    long long seconds = timer.stop() / 1000000;// convert us to s;   
+    long long minutes = seconds / 60;
+    int hours = minutes / 60;
 
-    std::cout << "\nTotal time: " << min << "m" << sec << "s\n";
+    std::cout << "\nTotal time: " << hours << ":" << (minutes%60) << ":" << (seconds%60) << "s\n";
 
     std::cout << "\nFINISHED\n";
     return 0;
