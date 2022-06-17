@@ -1,0 +1,40 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "linux-gcc-x64"
+        },
+        {
+            "name": "xrt",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/xilinx/xrt/include/**",
+                "/home/maxime/Documents/Vitis_Accel_Examples-master/common/includes/**",
+                "/tools/Xilinx/Vitis_HLS/2022.1/include/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "linux-gcc-x64",
+            "mergeConfigurations": false,
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/**",
+                    "/opt/xilinx/xrt/include/**",
+                    "/home/maxime/Documents/Vitis_Accel_Examples-master/common/includes/**",
+                    "/tools/Xilinx/Vitis_HLS/2022.1/include/**"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        }
+    ],
+    "version": 4
+}
