@@ -235,16 +235,16 @@ int main(int argc, char** argv) {
     double average_read_throughput_from_cpu = sum_read_throughput_from_cpu / num_iter;
 
     std::cout << "\nWrite bandwidth achieved :\n"
-    		  << "		Max throughput from cpu: " << throughput_from_cpu_max_host_to_ssd << " MB/s\n"
-              << "		Average throughput from cpu: " << average_write_throughput_from_cpu << " MB/s\n\n"
-    		  << "		Max throughput from fpga: " << throughput_from_fpga_max_host_to_ssd << " MB/s\n"
-              << "		Average throughput from fpga: " << average_write_throughput_from_fpga << " MB/s\n";
+    		  << "		Max throughput from cpu: " << throughput_from_cpu_max_host_to_ssd << " MiB/s\n"
+              << "		Average throughput from cpu: " << average_write_throughput_from_cpu << " MiB/s\n\n"
+    		  << "		Max throughput from fpga: " << throughput_from_fpga_max_host_to_ssd << " MiB/s\n"
+              << "		Average throughput from fpga: " << average_write_throughput_from_fpga << " MiB/s\n";
 
     std::cout << "\nRead bandwidth achieved :\n"
-    		  << "		Max throughput from cpu: " << throughput_from_cpu_max_ssd_to_host << " MB/s\n"
-              << "		Average throughput from cpu: " << average_read_throughput_from_cpu << " MB/s\n\n"
-    		  << "		Max throughput from fpga: " << throughput_from_fpga_max_ssd_to_host << " MB/s\n"
-              << "		Average throughput from fpga: " << average_read_throughput_from_fpga << " MB/s\n";
+    		  << "		Max throughput from cpu: " << throughput_from_cpu_max_ssd_to_host << " MiB/s\n"
+              << "		Average throughput from cpu: " << average_read_throughput_from_cpu << " MiB/s\n\n"
+    		  << "		Max throughput from fpga: " << throughput_from_fpga_max_ssd_to_host << " MiB/s\n"
+              << "		Average throughput from fpga: " << average_read_throughput_from_fpga << " MiB/s\n";
 
     long long seconds = timer.stop() / 1000000;// convert us to s;   
     long long minutes = seconds / 60;
