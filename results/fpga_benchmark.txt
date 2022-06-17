@@ -1,0 +1,15 @@
+Write bandwidth achieved :
+- Max throughput from cpu: 1633.66 MB/s
+- Average throughput from cpu: 1524.91 MB/s
+
+- Max throughput from fpga: 1633.7 MB/s
+- Average throughput from fpga: 1524.97 MB/s
+
+Read bandwidth achieved :
+- Max throughput from cpu: 2937.57 MB/s
+- Average throughput from cpu: 2185.39 MB/s
+
+- Max throughput from fpga: 2937.69 MB/s
+- Average throughput from fpga: 2185.46 MB/s
+
+Total time: 2h16m56s
