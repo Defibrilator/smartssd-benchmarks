@@ -1,5 +1,7 @@
 # Benchmarks
 
+We are working with the U.2 SmartSSD from Xilinx. These benhmarks are made to test the throughput capabilities of the SmartSSD.
+
 ## Without FPGA
 
 The first benchmark is done with FIO, it tests the strict capabilities of the SSD without use of the FPGA. The results and the commands used can be be found inside **nofgpa_fio_benchmarks.txt**. 
