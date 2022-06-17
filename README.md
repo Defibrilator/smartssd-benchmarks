@@ -38,18 +38,20 @@ We use the user defined `Timer` class to compute the throughput and return it to
 
 The second part of the iteration is the call to `p2p_ssd_to_host()` which is very similar to `p2p_host_to_ssd()` but defines its own buffers. `pread()` is used on the buffer map instead of `pwrite()`.
 
-### Results afer 300 iterations
+### Results afer 3000 iterations
 
 Write bandwidth achieved :
-- Max throughput from cpu: 1603.93 MB/s
-- Average throughput from cpu: 1524.55 MB/s
-- Max throughput from fpga: 1603.99 MB/s
-- Average throughput from fpga: 1524.61 MB/s
+- Max throughput from cpu: 1633.66 MB/s
+- Average throughput from cpu: 1524.91 MB/s
+
+- Max throughput from fpga: 1633.7 MB/s
+- Average throughput from fpga: 1524.97 MB/s
 
 Read bandwidth achieved :
-- Max throughput from cpu: 2924.12 MB/s
-- Average throughput from cpu: 2231.27 MB/s
-- Max throughput from fpga: 2924.26 MB/s
-- Average throughput from fpga: 2231.35 MB/s
+- Max throughput from cpu: 2937.57 MB/s
+- Average throughput from cpu: 2185.39 MB/s
 
-Total time: 14m45s
+- Max throughput from fpga: 2937.69 MB/s
+- Average throughput from fpga: 2185.46 MB/s
+
+Total time: 2h16m56s
