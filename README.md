@@ -1,6 +1,6 @@
 # Benchmarks
 
-We are working with the U.2 SmartSSD from Xilinx. These benhmarks are made to test the throughput capabilities of the SmartSSD.
+We are working with the U.2 SmartSSD from Xilinx. These benchmarks are made to test the throughput capabilities of the SmartSSD.
 
 ## Without FPGA
 
